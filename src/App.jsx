@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
-import Welcome from './components/Welcome';
-import Support from './components/Support';
-
+import Support from "./components/Support"
+import Welcome from "./components/Welcome"
 function App() {
-  const name = 'StarGazers'
+  const someName = 'StarGazers'
   return (
     <div className="container">
       <article>
+        <img src="images/group.svg" alt="StarGazers Group" />
         <hgroup>
-          <img src="images/group.svg" alt="StarGazers Group" />
-          <Welcome name="StarGazers" />
-          <p>Members of an <b>intergalactic alliance</b><br />
-            paving the way for peace and benevolence among all species. They are known for their enthusiasm for science, for their love of fun, and their dedication to education.</p>
-          <Support />
+          <Welcome someName="StarGazers"/>
+          <p>Members of an <b>intergalactic alliance</b> <br/>
+          paving the way for peace and benevolence among all species. They are known for their enthusiasm for science, for their love of fun, and their dedication to education.</p>
+          <Support/>
         </hgroup>
       </article>
     </div>
