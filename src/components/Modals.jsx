@@ -21,11 +21,15 @@ export default ({ member, handleClose, handleChange }) => {
               <p>{member.bio}</p>
               <hgroup>
                 <a className="outline" href="#" role="button"
-                  onClick={() => { handleChange(Number(member.id) - 1) }}
-                >previous</a>
+                onClick={()=>{
+                  handleChange(Number(member.id)-1)
+                }}
+                >Previous</a>
                 <a className="outline" href="#" role="button"
-                  onClick={() => { handleChange(Number(member.id) + 1) }}
-                >next</a>
+                onClick={()=>{
+                  handleChange(Number(member.id)+1)
+                }}
+                >Next</a>
               </hgroup>
             </hgroup>
           </div>
