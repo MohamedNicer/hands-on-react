@@ -1,31 +1,30 @@
-import { useState, useEffect } from "react";
+import { useState,useEffect } from "react";
 
-export default () => {
+export default ()=> {
   const [cast, setCast] = useState([]);
 
-  async function fetchCast() {
-    const response = await fetch('cast.json');
+  async function fetchCast(){
+    const response = await fetch("cast.json");
     setCast(await response.json());
   }
-
-  useEffect(() => {
+  useEffect (()=>{
     fetchCast();
   });
-
   return (
     <div style={{
       display: "grid",
       gridTemplateColumns: `repeat(auto-fit, minmax(90px, 1fr))`,
       gap: `1rem`,
-      marginBottom: '1rem'
+      marginBottom : `1rem`
     }}>
       {
-        cast.map(member => (
-          <a key={member.id} data-tooltip={member.name}>
-            <img src={`images/${member.slug}_tn.svg`} alt={member.name} />
-          </a>
-        ))
+      cast.map(member =>(
+        <a key={member.id} data-tooltip={member.name}>
+          <img src={`images/${member.slug}_tn.svg`} alt={member.name} />
+        </a>
+      ))
       }
     </div>
   )
+
 }
