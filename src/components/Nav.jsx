@@ -1,4 +1,4 @@
-import "./Nav.css";
+import './Nav.css';
 
 export default ({ cast, onChoice }) => {
   return (
