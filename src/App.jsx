@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ListCast from './components/ListCast';
 import Modals from './components/Modals';
 import Nav from './components/Nav';
-import "./App.scss";
+import './App.scss'
 
 function App() {
   const [cast, setCast] = useState([]);
@@ -23,7 +23,7 @@ function App() {
       <div className="container">
         <hgroup>
           <img src="images/group.svg" alt="StarGazers Group" />
-          <h1>Meet the Stargazers</h1>
+          <h1>Meet the <i style={{color: "blueviolet"}}>StarGazers</i></h1>
           <p>Members of an <b>intergalactic alliance</b> paving the way for peace and benevolence among all species. They are known for their enthusiasm for science, for their love of fun, and their dedication to education.</p>
           <ListCast cast={cast} onChoice={(info) => { setMemberInfo(info) }} />
           {memberInfo && <Modals member={memberInfo} handleChange={(info) => { setMemberInfo(cast[info]) }} handleClose={() => { setMemberInfo(null) }} />}
