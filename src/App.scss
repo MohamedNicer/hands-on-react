@@ -1,8 +1,8 @@
 @import "./variables";
 @import "@picocss/pico";
 
-body {
-  font-family: "Poppins", sans-serif;
+body{
+  font-family: 'Poppins', sans-serif;
 }
 
 h1,
@@ -12,6 +12,6 @@ h4,
 h5,
 h6,
 b {
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
   color: $primary-500;
 }
